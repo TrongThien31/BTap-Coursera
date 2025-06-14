@@ -1,0 +1,59 @@
+/* 1. body */
+body {
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. header */
+header {
+  background-color: #336699;
+  color: white;
+  padding: 20px;
+}
+
+/* 3. nav */
+nav {
+  background-color: #224466;
+  padding: 10px;
+}
+
+/* 4. nav li */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+nav li {
+  flex: 1;
+  /* hoặc bạn có thể dùng width nếu muốn */
+}
+
+/* 5. main */
+main {
+  background-color: #f4f4f4;
+  font-size: 17px;
+  padding: 20px;
+}
+
+/* 6. footer */
+footer {
+  background-color: #224466;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* 7. h1 */
+h1 {
+  text-align: center;
+  font-family: "Georgia", serif;
+  color: #112244;
+}
+
+/* 8. p */
+p {
+  line-height: 1.6;
+}
