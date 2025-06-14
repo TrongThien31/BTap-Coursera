@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+  <nav>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="page2.html">Gallery</a></li>
+      <li><a href="page3.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main id="main-content">
+    <h1>Welcome to My Website</h1>
+    <div class="gallery-grid">
+      <img src="images/img1.jpg" alt="Image 1">
+      <img src="images/img2.jpg" alt="Image 2">
+      <img src="images/img3.jpg" alt="Image 3">
+      <img src="images/img4.jpg" alt="Image 4">
+      <img src="images/img5.jpg" alt="Image 5">
+    </div>
+  </main>
+</body>
+</html>
+
+#style
+/* Skip to main content (chỉ hiện khi focus) */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 20px;
+  background-color: #e0e0e0;
+  padding: 10px;
+}
+.nav li {
+  list-style: none;
+}
+.nav a {
+  text-decoration: none;
+  color: #333;
+}
+.nav a:hover {
+  color: #0077cc;
+}
+
+/* Gallery grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+.gallery-grid img {
+  width: 100%;
+  border: 2px solid #ccc;
+  padding: 5px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* nth-child example */
+.gallery-grid img:nth-child(odd) {
+  border-radius: 50%;
+}
+
