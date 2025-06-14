@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Accessibility Skip Link -->
+    <a href="#main" class="skip-link">Skip to Main Content</a>
+
+    <!-- Navigation -->
+    <nav>
+        <img src="logo.png" alt="Logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <main id="main">
+        <section class="grid">
+            <div><img src="image1.jpg" alt="Image 1"></div>
+            <div><img src="image2.jpg" alt="Image 2"></div>
+        </section>
+
+        <section class="flex">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+        </section>
+    </main>
+</body>
+</html>
+
+##
+/* Skip link styling */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: black;
+    color: white;
+    padding: 8px;
+    z-index: 100;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* Navigation styling */
+nav {
+    display: inline-block;
+    width: 80%;
+}
+
+nav img {
+    width: 10%;
+}
+
+/* Commented out old li styling */
+/*
+li {
+    display: inline-block;
+    margin: 10px;
+}
+*/
+
+/* Grid layout */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    align-items: start;
+    row-gap: 20px;
+}
+
+.grid img {
+    width: 100%;
+}
+
+/* Flex layout */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
