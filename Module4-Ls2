@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessible Interactive Photo Gallery</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 20px;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+      border: 3px solid transparent;
+      transition: 0.3s ease;
+    }
+
+    img:focus,
+    img:hover {
+      border-color: blue;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- 6 hình ảnh với alt -->
+  <img src="https://via.placeholder.com/200?text=Image+1" alt="Placeholder image 1">
+  <img src="https://via.placeholder.com/200?text=Image+2" alt="Placeholder image 2">
+  <img src="https://via.placeholder.com/200?text=Image+3" alt="Placeholder image 3">
+  <img src="https://via.placeholder.com/200?text=Image+4" alt="Placeholder image 4">
+  <img src="https://via.placeholder.com/200?text=Image+5" alt="Placeholder image 5">
+  <img src="https://via.placeholder.com/200?text=Image+6" alt="Placeholder image 6">
+
+  <script>
+    window.onload = function () {
+      console.log("Page loaded - calling addTabFocus()");
+      addTabFocus();
+      addEventListeners();
+    };
+
+    function addTabFocus() {
+      const images = document.querySelectorAll("img");
+      for (let i = 0; i < images.length; i++) {
+        images[i].setAttribute("tabindex", "0");
+      }
+    }
+
+    function handleFocus(event) {
+      console.log("Image focused:", event.target.alt);
+    }
+
+    function handleBlur(event) {
+      console.log("Image blurred:", event.target.alt);
+    }
+
+    function handleMouseOver(event) {
+      console.log("Mouse over image:", event.target.alt);
+    }
+
+    function handleMouseLeave(event) {
+      console.log("Mouse left image:", event.target.alt);
+    }
+
+    function addEventListeners() {
+      const images = document.querySelectorAll("img");
+
+      images.forEach((img) => {
+        img.addEventListener("focus", handleFocus);
+        img.addEventListener("blur", handleBlur);
+        img.addEventListener("mouseover", handleMouseOver);
+        img.addEventListener("mouseleave", handleMouseLeave);
+      });
+    }
+  </script>
+</body>
+</html>
