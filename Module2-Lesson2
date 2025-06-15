@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Interactive Photo Gallery</title>
+  <style>
+    #image {
+      width: 400px;
+      height: 300px;
+      background-color: #eee;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      line-height: 300px;
+      font-size: 20px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    img.preview {
+      width: 100px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="image">Hover over an image below to display here.</div>
+  
+  <img class="preview" src="https://via.placeholder.com/400x300/ff7f7f/333333?text=Image+1" alt="Image 1 Description" onmouseover="upDate(this)" onmouseout="undo()">
+  <img class="preview" src="https://via.placeholder.com/400x300/7fbfff/333333?text=Image+2" alt="Image 2 Description" onmouseover="upDate(this)" onmouseout="undo()">
+  <img class="preview" src="https://via.placeholder.com/400x300/90ee90/333333?text=Image+3" alt="Image 3 Description" onmouseover="upDate(this)" onmouseout="undo()">
+
+  <script>
+    function upDate(previewPic) {
+      console.log("Mouseover triggered");
+      console.log("Alt text:", previewPic.alt);
+      console.log("Image src:", previewPic.src);
+
+      let imageDiv = document.getElementById("image");
+      imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
+      imageDiv.innerHTML = previewPic.alt;
+    }
+
+    function undo() {
+      let imageDiv = document.getElementById("image");
+      imageDiv.style.backgroundImage = "url('')";
+      imageDiv.innerHTML = "Hover over an image below to display here.";
+    }
+  </script>
+</body>
+</html>
