@@ -1,0 +1,28 @@
+/* Default: Mobile View – đã được cung cấp sẵn */
+
+/* Tablet View: Từ 772px trở lên */
+@media (min-width: 772px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .box {
+    width: 45vw; /* 45% viewport width */
+    margin-bottom: 20px;
+  }
+
+  .box img {
+    max-height: 30vh; /* 30% viewport height */
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Large Screen View: Từ 998px trở lên */
+@media (min-width: 998px) {
+  .box {
+    width: 30vw; /* 30% viewport width */
+  }
+}
