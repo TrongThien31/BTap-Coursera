@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive Final Project</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="grid">
+    <figure>
+      <img src="images/pic1.jpg" alt="A peaceful landscape">
+      <figcaption>Nature Landscape</figcaption>
+    </figure>
+    <figure>
+      <img src="images/pic2.jpg" alt="A modern building">
+      <figcaption>Architecture</figcaption>
+    </figure>
+    <figure>
+      <img src="images/pic3.jpg" alt="People working on laptops">
+      <figcaption>Teamwork</figcaption>
+    </figure>
+    <p>
+      This is a fully responsive site built using a mobile-first approach. It adapts to screen sizes and user preferences like reduced motion and color scheme.
+    </p>
+  </main>
+</body>
+</html>
+
+
+
+/* Base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #333;
+  scroll-behavior: smooth;
+  padding: 20px;
+}
+
+/* Mobile view (default) */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+figure {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Tablet view */
+@media (min-width: 772px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  figure {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  figure:last-of-type {
+    grid-column: span 2;
+  }
+}
+
+/* Large screen view */
+@media (min-width: 992px) {
+  figure {
+    border-radius: 0;
+  }
+
+  .grid figure:nth-of-type(3n) {
+    grid-column: span 2;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #111;
+    color: #ffeb8a;
+  }
+
+  figure {
+    background-color: #222;
+    color: #ffeb8a;
+    border: 1px solid black;
+  }
+}
