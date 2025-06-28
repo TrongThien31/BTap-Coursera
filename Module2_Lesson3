@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe Sketch</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  header, footer {
+    border: 1px solid black;
+    text-align: center;
+    padding: 20px;
+  }
+  nav {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  .box {
+    border: 1px solid black;
+    padding: 40px;
+    text-align: center;
+  }
+  @media(min-width: 768px) {
+    .container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    .box {
+      flex: 1 1 30%;
+      margin: 10px;
+      padding: 60px;
+    }
+  }
+</style>
+</head>
+<body>
+<header>Header - Site Title</header>
+<nav>Navigation Links</nav>
+<div class="container">
+  <div class="box">Hero Image / Banner</div>
+  <div class="box">About Section</div>
+  <div class="box">Features Section</div>
+  <div class="box">Testimonials</div>
+  <div class="box">Call to Action</div>
+</div>
+<footer>Footer - Contact Info</footer>
+</body>
+</html>
