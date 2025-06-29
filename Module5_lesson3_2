@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Site</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <button id="darkToggle">Toggle Dark Mode</button>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Welcome to my portfolio site. I am a student learning responsive design and clean code structure.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Responsive Layout</h3>
+      <p>This project demonstrates a responsive grid and clean layout with validation compliance.</p>
+    </div>
+    <div class="project">
+      <h3>CSS Animation</h3>
+      <p>This project showcases CSS hover animations and transitions for interactivity.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: student@example.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Portfolio</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+:root {
+  --bg: #ffffff;
+  --text: #333333;
+  --accent: #007acc;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth; /* EXTRA 1: smooth scroll */
+}
+
+header {
+  background: var(--accent);
+  color: white;
+  padding: 1rem;
+  position: sticky; /* EXTRA 2: sticky header */
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  background: #f0f0f0;
+  padding: 0.5rem;
+}
+
+section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.project {
+  background: #eeeeee;
+  margin: 1rem auto;
+  padding: 1rem;
+  max-width: 400px;
+  border-radius: 8px;
+  transition: transform 0.3s; /* EXTRA 3: animation */
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  background: #222222;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+}
+
+.dark-mode {
+  --bg: #121212;
+  --text: #dddddd;
+  --accent: #bb86fc;
+}
+
