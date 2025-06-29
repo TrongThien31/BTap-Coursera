@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header id="header">
+        <h1>My Portfolio</h1>
+        <button id="toggle-dark">🌙</button>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello, I am a web developer passionate about responsive and accessible design.</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Project 1</h3>
+            <p>A sample responsive website with modern styling.</p>
+        </div>
+        <div class="project-card">
+            <h3>Project 2</h3>
+            <p>Another example project demonstrating CSS animations and structure.</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: student@example.com</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #007acc;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    scroll-behavior: smooth; /* EXTRA 1: Smooth scroll */
+}
+
+header {
+    position: sticky; /* EXTRA 2: Sticky header */
+    top: 0;
+    background: var(--accent-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    background: #f2f2f2;
+    padding: 0.5rem;
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.project-card {
+    background: #e0e0e0;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    transition: transform 0.3s; /* EXTRA 3: Animation */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background: #333333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+}
+
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --accent-color: #bb86fc;
+}
