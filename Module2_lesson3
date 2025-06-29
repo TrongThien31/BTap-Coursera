@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wireframe Mockup</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      border: 2px dashed gray;
+      background-color: #ddd;
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+    }
+    .container {
+      display: grid;
+      gap: 10px;
+    }
+    @media(min-width: 768px) {
+      .container {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;">Wireframe Mockup - Larger Screen View</h1>
+  <div class="container">
+    <div class="box">Header</div>
+    <div class="box">Navigation</div>
+    <div class="box">Hero Image / Banner</div>
+    <div class="box">Main Content</div>
+    <div class="box">Sidebar</div>
+    <div class="box">Footer</div>
+  </div>
+
+  <h1 style="text-align:center; margin-top:50px;">Wireframe Mockup - Mobile View</h1>
+  <div class="container" style="grid-template-columns: 1fr;">
+    <div class="box">Header</div>
+    <div class="box">Navigation</div>
+    <div class="box">Hero Image / Banner</div>
+    <div class="box">Main Content</div>
+    <div class="box">Sidebar (Below Content on Mobile)</div>
+    <div class="box">Footer</div>
+  </div>
+</body>
+</html>
