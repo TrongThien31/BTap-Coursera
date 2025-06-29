@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wireframe Assignment</title>
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+  }
+  header, nav, main, aside, footer {
+    border: 2px dashed #999;
+    background: #eee;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+  }
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main {
+    flex: 2;
+  }
+  aside {
+    flex: 1;
+  }
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Wireframe - Larger Screen View</h2>
+<header>Header (Site Title / Logo)</header>
+<nav>Navigation Bar</nav>
+<div class="container">
+  <main>Main Content Area</main>
+  <aside>Sidebar Content</aside>
+</div>
+<footer>Footer</footer>
+
+<h2 style="text-align:center; margin-top:50px;">Wireframe - Mobile View</h2>
+<header>Header (Site Title / Logo)</header>
+<nav>Navigation Bar</nav>
+<main>Main Content Area</main>
+<aside>Sidebar (appears below main content on mobile)</aside>
+<footer>Footer</footer>
+
+</body>
+</html>
