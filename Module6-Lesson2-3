@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Portfolio</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <button id="darkToggle">🌙 Dark Mode</button>
+  </header>
+  <main>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-card">Project 1: Responsive Website</div>
+      <div class="project-card">Project 2: JavaScript App</div>
+    </section>
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Name" required />
+        <input type="email" id="email" placeholder="Email" required />
+        <textarea id="message" placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    <section id="map">
+      <h2>My Location</h2>
+      <iframe src="https://maps.google.com/?q=New+York&output=embed"></iframe>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 My Portfolio</p>
+  </footer>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+* { box-sizing: border-box; scroll-behavior: smooth; }
+body { font-family: sans-serif; margin: 0; padding: 0; transition: background 0.3s, color 0.3s; }
+header { background: #333; color: white; padding: 1rem; text-align: center; }
+header button { margin-top: 0.5rem; }
+main { padding: 1rem; }
+section { margin: 2rem 0; }
+.project-card { background: #f0f0f0; padding: 1rem; margin: 1rem 0; transition: transform 0.3s; }
+.project-card:hover { transform: scale(1.05); }
+#map iframe { width: 100%; height: 200px; border: none; }
+footer { background: #222; color: white; text-align: center; padding: 1rem; }
+.dark-mode { background: #121212; color: #ddd; }
+.dark-mode header { background: #222; }
+.dark-mode footer { background: #111; }
+form input, form textarea { display: block; width: 100%; margin: 0.5rem 0; padding: 0.5rem; }
+form button { padding: 0.5rem 1rem; }
+@media (max-width: 600px) {
+  header h1 { font-size: 1.5rem; }
+}
